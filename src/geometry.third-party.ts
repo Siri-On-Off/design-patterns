@@ -6,7 +6,7 @@ export interface Rectangular {
 export class Rectangle implements Rectangular {
   constructor(
     private width: number,
-    private height: number,
+    private height: number
   ) {}
 
   public getWidth(): number {
@@ -33,7 +33,11 @@ export class Calculator {
 
   public static getDiagonal(rectangle: Rectangular): number {
     return Math.sqrt(
-      Math.pow(rectangle.getHeight(), 2) + Math.pow(rectangle.getWidth(), 2),
+      Math.pow(rectangle.getHeight(), 2) + Math.pow(rectangle.getWidth(), 2)
     );
+  }
+
+  public static getWidthHeightRatio(rectangle: Rectangular): number {
+    return rectangle.getWidth() / rectangle.getHeight();
   }
 }
